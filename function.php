@@ -1,14 +1,15 @@
 <?php
 
 
-function nbInput($nbInput){
 
-    for ($i=0; $i < $nbInput; $i++) { 
-        echo '<input type="text" id="name" name="name" required
-        minlength="4" maxlength="8" size="10">';
-        echo '<br>';
+
+function createForm($listeElement){
+
+    foreach ($listeElement as $elementHtml){
+            echo '<input name="'.$elementHtml['name'].'" type="'.$elementHtml['type'].'" class="'.$elementHtml['class'].'" 
+            placeholder="'.$elementHtml['name'].'""> <br>';
+    
     }
-
 }
 
 
